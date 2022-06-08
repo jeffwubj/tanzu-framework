@@ -1348,13 +1348,13 @@ spec:
         lun: 0
         nameSuffix: etcddisk
       image:
-        marketplace:
+        id: unknown
       osDisk:
         diskSizeGB: 128
         managedDisk:
           storageAccountType: Premium_LRS
         osType: Linux
-      sshPublicKey: ${AZURE_SSH_PUBLIC_KEY_B64:=""}
+      sshPublicKey: ""
       vmSize: ${AZURE_CONTROL_PLANE_MACHINE_TYPE}
 ---
 apiVersion: infrastructure.cluster.x-k8s.io/v1beta1
@@ -1371,8 +1371,8 @@ spec:
           storageAccountType: Premium_LRS
         osType: Linux
       image:
-        marketplace:
-      sshPublicKey: ${AZURE_SSH_PUBLIC_KEY_B64:=""}
+        id: unknown
+      sshPublicKey: ""
       vmSize: ${AZURE_NODE_MACHINE_TYPE}
 
 ---
